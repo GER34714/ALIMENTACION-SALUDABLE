@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alimentación Saludables | Recetario +70 recetas + Bonos</title>
+  <meta name="description" content="No tenés que pasar hambre para comer sano. Recetario digital con +70 recetas prácticas, listas en 10-20 minutos, con ingredientes simples. Incluye 3 bonos GRATIS. Oferta lanzamiento: $14 USD." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alimentación Saludables | Comer rico, saludable y sin complicaciones" />
+  <meta property="og:description" content="Recetario digital con +70 recetas + 3 bonos GRATIS. Oferta de lanzamiento: $14 USD. Compra segura por Hotmart y entrega automática." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Alimentaci%C3%B3n+Saludables" />
+  <meta property="og:url" content="https://tusitio.com/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alimentación Saludables | Recetario + Bonos" />
+  <meta name="twitter:description" content="Comer sano no tiene que ser aburrido. +70 recetas + 3 bonos GRATIS. $14 USD por lanzamiento." />
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Alimentaci%C3%B3n+Saludables" />
+
+  <style>
+    :root{
+      --bg:#0b0f0d;
+      --bg2:#0f1512;
+      --card:#111a16;
+      --muted:#9fb0a6;
+      --text:#eaf3ee;
+      --line:rgba(255,255,255,.10);
+      --accent:#28b463; /* verde */
+      --accent2:#e74c3c; /* rojo CTA */
+      --accent3:#f1c40f; /* amarillo aviso */
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1100px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1100px 600px at 15% -10%, rgba(40,180,99,.18), transparent 60%),
+        radial-gradient(1000px 540px at 90% 0%, rgba(231,76,60,.14), transparent 55%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
+    .grid{ display:grid; gap:18px; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:14px 18px;
+      border-radius: 999px;
+      border:1px solid transparent;
+      background: var(--accent2);
+      color:#fff;
+      font-weight:800;
+      letter-spacing:.2px;
+      box-shadow: 0 14px 35px rgba(231,76,60,.26);
+      cursor:pointer;
+      transition: transform .15s ease, filter .15s ease;
+      user-select:none;
+    }
+    .btn:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+    .btn:active{ transform: translateY(0px); filter: brightness(.98); }
+
+    .btn.secondary{
+      background: transparent;
+      border-color: rgba(255,255,255,.16);
+      box-shadow:none;
+      color: var(--text);
+      font-weight:700;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius: 999px;
+      background: rgba(40,180,99,.10);
+      border: 1px solid rgba(40,180,99,.22);
+      color: #dff5e8;
+      font-weight:700;
+      font-size: 13px;
+      letter-spacing:.15px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:40;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,13,.55);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 14px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 220px;
+    }
+    .logo{
+      width:42px; height:42px;
+      border-radius: 14px;
+      background:
+        radial-gradient(18px 18px at 30% 35%, rgba(255,255,255,.25), transparent 55%),
+        linear-gradient(135deg, rgba(40,180,99,.95), rgba(46,204,113,.65));
+      box-shadow: 0 10px 28px rgba(40,180,99,.18);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .brand h1{
+      font-size: 14px;
+      margin:0;
+      line-height:1.1;
+      letter-spacing:.2px;
+    }
+    .brand p{
+      margin:3px 0 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .nav .actions{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
+
+    .hero{
+      padding: 46px 0 24px;
+    }
+    .hero-card{
+      border-radius: calc(var(--radius) + 8px);
+      border: 1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(900px 380px at 15% 25%, rgba(40,180,99,.16), transparent 55%),
+        radial-gradient(800px 320px at 88% 10%, rgba(231,76,60,.14), transparent 50%),
+        linear-gradient(180deg, rgba(17,26,22,.85), rgba(17,26,22,.58));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 18px;
+      padding: 26px;
+      align-items:center;
+    }
+    .hero h2{
+      margin: 14px 0 10px;
+      font-size: clamp(28px, 3.4vw, 46px);
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+    }
+    .hero h2 .accent{ color: var(--accent); }
+    .hero .lead{
+      margin: 0 0 16px;
+      color: rgba(234,243,238,.85);
+      font-size: 16px;
+      line-height:1.55;
+      max-width: 52ch;
+    }
+    .hero .cta-row{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-top: 14px;
+    }
+    .micro{
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+      line-height:1.5;
+    }
+
+    .mock{
+      border-radius: calc(var(--radius) + 6px);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.26);
+      padding: 18px;
+      display:grid;
+      gap:12px;
+    }
+    .mock .img{
+      border-radius: 16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      height: 220px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: rgba(234,243,238,.80);
+      text-align:center;
+      padding: 16px;
+      font-weight:800;
+      letter-spacing:.3px;
+    }
+    .mock .badges{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .badge{
+      padding:8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: rgba(234,243,238,.88);
+      font-weight:700;
+    }
+
+    section{ padding: 22px 0; }
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom: 14px;
+    }
+    .section-title h3{
+      margin:0;
+      font-size: 22px;
+      letter-spacing: -.2px;
+    }
+    .section-title p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height:1.4;
+      max-width: 58ch;
+    }
+    .card{
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(17,26,22,.55);
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    }
+    .pad{ padding: 18px; }
+
+    .who{
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+    .q{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding: 14px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .q .icon{
+      width:36px; height:36px;
+      border-radius: 14px;
+      background: rgba(40,180,99,.13);
+      border: 1px solid rgba(40,180,99,.22);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+      color: #dff5e8;
+      flex: 0 0 auto;
+    }
+    .q p{ margin:0; color: rgba(234,243,238,.90); line-height:1.45; }
+
+    .features{
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+    .feat{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:14px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+    }
+    .feat .tick{
+      width:22px; height:22px; border-radius:999px;
+      background: rgba(40,180,99,.18);
+      border:1px solid rgba(40,180,99,.28);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+      color: #c9f6db;
+      flex: 0 0 auto;
+      margin-top: 2px;
+    }
+    .feat b{ display:block; margin:0 0 4px; }
+    .feat span{ color: rgba(234,243,238,.82); line-height:1.45; }
+
+    .benefits{
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .testimonials{
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+    .t{
+      padding:16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      min-height: 160px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .t p{ margin:0; color: rgba(234,243,238,.88); line-height:1.5; }
+    .t .who2{ display:flex; align-items:center; gap:10px; }
+    .avatar{
+      width:34px; height:34px; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+    }
+    .who2 b{ font-size: 13px; }
+    .who2 span{ font-size: 12px; color: var(--muted); display:block; margin-top:2px; }
+
+    .bonuses{
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+    .bonus{
+      padding:16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .bonus .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .tag{
+      font-size: 12px;
+      font-weight:900;
+      background: rgba(231,76,60,.14);
+      border:1px solid rgba(231,76,60,.25);
+      color: #ffd9d4;
+      padding: 6px 10px;
+      border-radius: 999px;
+      letter-spacing:.2px;
+    }
+    .bonus h4{ margin:6px 0 0; font-size: 16px; }
+    .bonus p{ margin:0; color: rgba(234,243,238,.85); line-height:1.5; }
+    .price-line{
+      margin-top:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding-top: 10px;
+    }
+    .price-line b{ color: #fff; }
+
+    .trust{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+    }
+    .trust .box{
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .trust .box h4{ margin: 0 0 6px; font-size: 14px; }
+    .trust .box p{ margin: 0; color: rgba(234,243,238,.82); line-height:1.5; font-size: 13px; }
+
+    .pricing{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+      align-items:stretch;
+    }
+    .price-card{
+      border-radius: calc(var(--radius) + 6px);
+      border: 1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(700px 260px at 20% 10%, rgba(40,180,99,.14), transparent 55%),
+        radial-gradient(680px 250px at 90% 0%, rgba(231,76,60,.12), transparent 55%),
+        linear-gradient(180deg, rgba(17,26,22,.85), rgba(17,26,22,.60));
+      box-shadow: var(--shadow);
+      padding: 20px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+    .price-card .row{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .strike{ color: rgba(234,243,238,.55); text-decoration: line-through; font-weight:700; }
+    .big{
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 950;
+      letter-spacing: -1px;
+      color: #eafff2;
+    }
+    .off{
+      font-weight: 900;
+      color: #fff;
+      background: rgba(40,180,99,.16);
+      border: 1px solid rgba(40,180,99,.26);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing:.25px;
+    }
+    .mini{
+      font-size: 12px;
+      color: var(--muted);
+      line-height:1.5;
+    }
+    .alert{
+      margin-top: 12px;
+      background: rgba(241,196,15,.14);
+      border: 1px solid rgba(241,196,15,.22);
+      color: rgba(255,246,205,.95);
+      padding: 12px 14px;
+      border-radius: 16px;
+      font-size: 13px;
+      line-height: 1.5;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .alert b{ color:#fff; }
+
+    details{
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      overflow:hidden;
+    }
+    details + details{ margin-top: 10px; }
+    summary{
+      cursor:pointer;
+      padding: 14px 14px;
+      font-weight: 850;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    summary span{ color: rgba(234,243,238,.92); }
+    summary .chev{
+      width: 28px; height: 28px;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      display:flex; align-items:center; justify-content:center;
+      font-weight: 950;
+      color: rgba(234,243,238,.85);
+      flex: 0 0 auto;
+    }
+    details[open] summary .chev{ transform: rotate(180deg); }
+    details .content{
+      padding: 0 14px 14px;
+      color: rgba(234,243,238,.82);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .closing{
+      text-align:center;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+    .closing p{
+      margin:0;
+      color: rgba(234,243,238,.86);
+      line-height:1.7;
+      font-size: 14px;
+    }
+    .closing b{ color: #fff; }
+
+    footer{
+      padding: 26px 0 40px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: rgba(234,243,238,.65);
+      font-size: 12px;
+      text-align:center;
+    }
+
+    /* Floating WhatsApp (opcional) */
+    .wa-float{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 60;
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.30);
+      backdrop-filter: blur(10px);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      transition: transform .15s ease, filter .15s ease;
+    }
+    .wa-float:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+    .wa-icon{
+      width: 30px;
+      height: 30px;
+      display:block;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-inner{ grid-template-columns: 1fr; }
+      .pricing{ grid-template-columns: 1fr; }
+      .testimonials{ grid-template-columns: 1fr; }
+      .bonuses{ grid-template-columns: 1fr; }
+      .trust{ grid-template-columns: 1fr; }
+      .who, .features, .benefits{ grid-template-columns: 1fr; }
+      .nav{ gap:10px; }
+      .brand{ min-width: auto; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand" aria-label="Marca">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>Alimentación Saludables</h1>
+            <p>Comer rico, saludable y sin complicaciones</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn secondary" href="#faq">Ver dudas</a>
+          <a class="btn" href="#comprar" id="btnTop">Comprar ahora</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-card">
+          <div class="hero-inner">
+            <div>
+              <div class="pill">🥗 Recetario digital + 3 bonos GRATIS</div>
+              <h2>No tenés que <span class="accent">pasar hambre</span> para comer sano.</h2>
+              <p class="lead">Solo necesitás saber cómo. Empezá a comer <b>rico</b>, <b>saludable</b> y <b>sin complicaciones</b>, aunque tengas poco tiempo o no te guste complicarte en la cocina.</p>
+
+              <div class="cta-row">
+                <a class="btn" href="#comprar" id="btnHero">QUIERO EMPEZAR A COMER SALUDABLE</a>
+                <a class="btn secondary" href="#incluye">¿Qué incluye?</a>
+              </div>
+
+              <div class="micro">
+                ✅ Compra 100% segura por <b>Hotmart</b> · 📩 Entrega automática por correo · 🕒 Recetas listas en <b>10–20 min</b>
+              </div>
+            </div>
+
+            <div class="mock" aria-label="Vista previa del producto">
+              <div class="img">
+                <div>
+                  <div style="font-size:14px; opacity:.95;">Mockup del ebook + bonos</div>
+                  <div style="margin-top:10px; font-size:12px; opacity:.75;">Reemplazar por imagen real del producto</div>
+                </div>
+              </div>
+              <div class="badges">
+                <div class="badge">+70 recetas</div>
+                <div class="badge">10–20 minutos</div>
+                <div class="badge">Ingredientes simples</div>
+                <div class="badge">Acceso inmediato</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿ES PARA VOS? -->
+    <section id="para-vos">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>¿No sabés si esto es para vos?</h3>
+            <p>Si te sentís identificado con alguna de estas situaciones, este recetario es para vos.</p>
+          </div>
+        </div>
+
+        <div class="grid who">
+          <div class="q">
+            <div class="icon">🥗</div>
+            <p>¿Te abruma la idea de “comer sano” porque suena aburrido, caro o complicado?</p>
+          </div>
+          <div class="q">
+            <div class="icon">🧭</div>
+            <p>¿Sentís que no sabés por dónde empezar a cambiar tus hábitos?</p>
+          </div>
+          <div class="q">
+            <div class="icon">📅</div>
+            <p>¿Has intentado otras veces pero siempre terminás comiendo lo mismo o abandonando?</p>
+          </div>
+          <div class="q">
+            <div class="icon">✨</div>
+            <p>¿Te gustaría tener ideas simples y ricas para cuidar tu salud desde el plato?</p>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;" class="closing">
+          <p><b>Entonces este recetario es para vos.</b></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUÉ INCLUYE -->
+    <section id="incluye">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>¿Qué vas a encontrar dentro de “Alimentación Saludables”?</h3>
+            <p>Todo organizado, práctico y pensado para que lo puedas sostener en el día a día.</p>
+          </div>
+        </div>
+
+        <div class="grid features">
+          <div class="feat">
+            <div class="tick">✓</div>
+            <div>
+              <b>Más de 70 recetas organizadas por momento del día</b>
+              <span>Desayunos, almuerzos, cenas, snacks, batidos y postres.</span>
+            </div>
+          </div>
+
+          <div class="feat">
+            <div class="tick">✓</div>
+            <div>
+              <b>Preparaciones listas en 10–20 minutos</b>
+              <span>Ideal si tenés poco tiempo o no te gusta complicarte.</span>
+            </div>
+          </div>
+
+          <div class="feat">
+            <div class="tick">✓</div>
+            <div>
+              <b>Opciones para todos los gustos y estilos de vida</b>
+              <span>Recetas vegetarianas, sin gluten, sin azúcar refinada y con proteínas magras.</span>
+            </div>
+          </div>
+
+          <div class="feat">
+            <div class="tick">✓</div>
+            <div>
+              <b>Ingredientes simples y accesibles</b>
+              <span>Todo lo que necesitás lo encontrás en cualquier supermercado.</span>
+            </div>
+          </div>
+
+          <div class="feat" style="grid-column: 1 / -1;">
+            <div class="tick">✓</div>
+            <div>
+              <b>Sabor real sin culpa</b>
+              <span>Porque comer sano no tiene que ser insípido ni aburrido.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Lo vas a usar para lograr esto</h3>
+            <p>Menos estrés, más disfrute y resultados sostenibles sin extremos.</p>
+          </div>
+        </div>
+
+        <div class="grid benefits">
+          <div class="feat">
+            <div class="tick">✓</div>
+            <div>
+              <b>Comer sano sin contar calorías</b>
+              <span>Sin seguir dietas extremas.</span>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="tick">✓</div>
+            <div>
+              <b>Ahorrar tiempo y dinero</b>
+              <span>Con ingredientes simples y accesibles.</span>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="tick">✓</div>
+            <div>
+              <b>Cuidar tu cuerpo desde el placer</b>
+              <span>No desde el castigo.</span>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="tick">✓</div>
+            <div>
+              <b>Disfrutar tus comidas</b>
+              <span>Mientras mejorás energía, digestión y bienestar.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-row" style="margin-top:16px;">
+          <a class="btn" href="#comprar">QUIERO EMPEZAR A COMER SALUDABLE</a>
+        </div>
+        <div class="mini">Por $14 USD · Compra 100% segura · Entrega automática en tu correo</div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Personas reales que ya empezaron</h3>
+            <p>Porque comer sano no tiene que ser insípido ni aburrido. Solo faltás tú.</p>
+          </div>
+        </div>
+
+        <div class="grid testimonials">
+          <div class="t">
+            <p>“Definitivamente comer sano no es nada complicado ni mucho menos costoso como pensaba. Gracias porque sé que ahora cocino más rico y me siento con más energía.”</p>
+            <div class="who2">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <b>María Fernanda</b>
+                <span>Compradora verificada</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="t">
+            <p>“Me encantó lo práctico que es. Todo está muy claro, no necesitás ser chef. Las pude hacer con ingredientes que ya tengo en casa.”</p>
+            <div class="who2">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <b>Diana</b>
+                <span>Compradora verificada</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="t">
+            <p>“Te cuento que soy mamá y trabajo, y no tengo tiempo. Estas recetas me organizaron y están rápidas. Ahora hacer alimentación rica se hace más sencilla.”</p>
+            <div class="who2">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <b>Cris</b>
+                <span>Compradora verificada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-row" style="margin-top:16px;">
+          <a class="btn" href="#comprar">QUIERO COMER SANO Y RICO</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BONOS -->
+    <section id="bonos">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Accedés hoy y te llevás 3 bonos exclusivos totalmente GRATIS</h3>
+            <p>Sumás valor real para sostener el cambio sin complicarte.</p>
+          </div>
+        </div>
+
+        <div class="grid bonuses">
+          <div class="bonus">
+            <div class="top">
+              <div class="tag">🎁 BONO 1</div>
+              <div style="font-size:12px;color:var(--muted);">HOY GRATIS</div>
+            </div>
+            <h4>Bebidas saludables</h4>
+            <p>Limpia tu cuerpo de forma natural, mejora tu digestión y activa tu metabolismo con recetas fáciles, sabrosas y refrescantes.</p>
+            <div class="price-line">
+              <span>Valor:</span>
+              <b>$9 USD → HOY GRATIS</b>
+            </div>
+          </div>
+
+          <div class="bonus">
+            <div class="top">
+              <div class="tag">🎁 BONO 2</div>
+              <div style="font-size:12px;color:var(--muted);">HOY GRATIS</div>
+            </div>
+            <h4>Salsas caseras en minutos</h4>
+            <p>Convertí cualquier plato básico en una experiencia gourmet. Incluye salsas para ensaladas, pastas, carnes y dips… ¡sin conservantes ni excesos!</p>
+            <div class="price-line">
+              <span>Valor:</span>
+              <b>$15 USD → HOY GRATIS</b>
+            </div>
+          </div>
+
+          <div class="bonus">
+            <div class="top">
+              <div class="tag">🎁 BONO 3</div>
+              <div style="font-size:12px;color:var(--muted);">HOY GRATIS</div>
+            </div>
+            <h4>Infaltables del mercado</h4>
+            <p>Organizá tus compras sin estrés, elegí mejor tus ingredientes y evitá ultraprocesados. Incluye lista editable para adaptarla a gustos y presupuesto.</p>
+            <div class="price-line">
+              <span>Valor:</span>
+              <b>$7 USD → HOY GRATIS</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEGURIDAD / GARANTÍA -->
+    <section id="garantia">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Compra segura + garantía</h3>
+            <p>Sin riesgo. Probalo y decidí tranquilo.</p>
+          </div>
+        </div>
+
+        <div class="trust">
+          <div class="box">
+            <h4>✅ 7 días de garantía</h4>
+            <p>Tenés 7 días para probar el recetario. Si no es lo que esperabas, podés pedir la devolución total del dinero sin explicaciones.</p>
+          </div>
+          <div class="box">
+            <h4>🔒 Pago 100% seguro (Hotmart)</h4>
+            <p>Tu pago se procesa mediante Hotmart. Recibís el acceso automáticamente en tu correo para descargar en PDF.</p>
+          </div>
+          <div class="box">
+            <h4>📩 Acceso inmediato</h4>
+            <p>Solo necesitás hacer clic, pagar y en minutos tendrás acceso desde tu dispositivo. También queda disponible en tu cuenta de Hotmart.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECIO / CTA -->
+    <section id="comprar">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Resumen de lo que obtenés hoy</h3>
+            <p>Recetario + bonos + acceso inmediato. Todo listo para empezar hoy mismo.</p>
+          </div>
+        </div>
+
+        <div class="pricing">
+          <div class="price-card" aria-label="Precio y compra">
+            <div class="row">
+              <div class="pill">✅ +70 preparaciones · ✅ Acceso inmediato y de por vida</div>
+              <div class="off">85% OFF</div>
+            </div>
+
+            <div class="row" style="margin-top:6px;">
+              <div>
+                <div class="strike">Valor total: $45 USD</div>
+                <div class="big">AHORA SOLO $14 USD</div>
+              </div>
+            </div>
+
+            <div class="mini">🎁 Incluye BONUS 1 (Bebidas saludables), BONUS 2 (Salsas caseras), BONUS 3 (Infaltables del mercado)</div>
+
+            <div class="cta-row" style="margin-top:12px;">
+              <!-- Reemplazá el href con tu checkout real (Hotmart / link de compra) -->
+              <a class="btn" id="buyBtn" href="https://hotmart.com/" target="_blank" rel="noopener">COMPRAR AHORA</a>
+              <a class="btn secondary" href="#faq">Tengo dudas</a>
+            </div>
+
+            <div class="alert">
+              <div aria-hidden="true">⚠️</div>
+              <div>
+                <b>Oferta especial de lanzamiento</b><br/>
+                Este precio es temporal y puede subir en cualquier momento. ¡No lo dejes pasar! Hoy podés empezar a transformar tu alimentación sin complicarte.
+              </div>
+            </div>
+
+            <div class="mini" style="margin-top:6px;">
+              *Haz clic en el botón para ver el precio en tu moneda local (según plataforma).
+            </div>
+          </div>
+
+          <div class="card pad" aria-label="Qué recibís">
+            <h4 style="margin:0 0 10px;">¿Qué recibís exactamente?</h4>
+            <div class="grid" style="gap:10px;">
+              <div class="feat">
+                <div class="tick">✓</div>
+                <div>
+                  <b>Recetario digital en PDF</b>
+                  <span>Más de 70 recetas para desayunos, almuerzos, cenas, snacks, batidos y postres.</span>
+                </div>
+              </div>
+              <div class="feat">
+                <div class="tick">✓</div>
+                <div>
+                  <b>3 bonos complementarios</b>
+                  <span>Para organizarte, mejorar tus platos y disfrutar el proceso.</span>
+                </div>
+              </div>
+              <div class="feat">
+                <div class="tick">✓</div>
+                <div>
+                  <b>Acceso inmediato</b>
+                  <span>Te llega por correo en minutos para descargarlo, imprimirlo y usarlo.</span>
+                </div>
+              </div>
+              <div class="feat">
+                <div class="tick">✓</div>
+                <div>
+                  <b>Garantía de 7 días</b>
+                  <span>Probalo sin riesgo. Si no es para vos, pedís devolución.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Si todavía no tomaste una decisión…</h3>
+            <p>Probablemente alguna de tus dudas ya haya sido resuelta aquí.</p>
+          </div>
+        </div>
+
+        <div class="grid" style="gap:10px;">
+          <details>
+            <summary><span>¿Para quién es este producto?</span><span class="chev">⌄</span></summary>
+            <div class="content">
+              Para personas que quieren empezar a alimentarse mejor sin sacrificios.<br/>
+              Para mamás, mujeres ocupadas, principiantes en cocina o cualquiera que quiera aprender a comer rico, fácil y sano desde casa.
+            </div>
+          </details>
+
+          <details>
+            <summary><span>¿Qué voy a recibir?</span><span class="chev">⌄</span></summary>
+            <div class="content">
+              Un recetario digital en PDF con más de 70 recetas + 3 bonos complementarios que te ayudan a organizarte, mejorar tus platos y disfrutar el proceso.
+            </div>
+          </details>
+
+          <details>
+            <summary><span>¿Cómo funciona la garantía?</span><span class="chev">⌄</span></summary>
+            <div class="content">
+              Tenés <b>7 días</b> para probarlo. Si no estás conforme con el material, podés pedir la devolución total del dinero sin explicaciones.
+            </div>
+          </details>
+
+          <details>
+            <summary><span>¿Cómo accedo al producto?</span><span class="chev">⌄</span></summary>
+            <div class="content">
+              Una vez completes el pago, recibirás todo por correo electrónico en formato PDF para descargarlo, imprimirlo y usarlo de inmediato.<br/><br/>
+              También podés acceder desde Hotmart:
+              <ul>
+                <li>Entrá a Hotmart y hacé clic en “Entrar”.</li>
+                <li>Ve al menú lateral y seleccioná “Mi cuenta”.</li>
+                <li>Hacé clic en “Mis compras” y ahí estará el ebook listo para vos.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary><span>¿Cómo hago para comprar?</span><span class="chev">⌄</span></summary>
+            <div class="content">
+              Hacé clic en el botón <b>“Comprar ahora”</b>, completá el formulario de pago seguro y en minutos tendrás acceso al recurso completo directamente en tu correo.
+            </div>
+          </details>
+        </div>
+
+        <div class="cta-row" style="margin-top:16px;">
+          <a class="btn" href="#comprar">COMPRAR AHORA</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIERRE EMOCIONAL -->
+    <section>
+      <div class="wrap">
+        <div class="closing">
+          <p><i>“Tu cuerpo te habla todos los días a través de lo que sentís. Hoy podés empezar a escucharlo desde el plato, sin culpas y con placer.”</i></p>
+          <p style="margin-top:10px;"><b>Con cariño,</b><br/>El equipo detrás de “Alimentación Saludables” 💚🥑</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>Copyright © 2024 · Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante (opcional)
+       Reemplazá el número si corresponde, o borrá todo este bloque si no aplica. -->
+  <a class="wa-float" href="https://wa.me/5491164499481" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <!-- SVG WhatsApp (estilo oficial simple) -->
+    <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="#25D366" d="M19.11 17.33c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.31.2-.57.07-.26-.13-1.1-.41-2.1-1.31-.78-.69-1.31-1.54-1.46-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.17-.26.26-.43.09-.17.04-.33-.02-.46-.06-.13-.58-1.4-.79-1.92-.21-.51-.43-.44-.58-.45l-.5-.01c-.17 0-.46.06-.7.33-.24.26-.92.9-.92 2.19 0 1.29.94 2.54 1.07 2.72.13.17 1.85 2.82 4.49 3.95.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.53-.63 1.75-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.17-.5-.3z"/>
+      <path fill="#25D366" d="M27.2 4.8C24.3 1.9 20.3.3 16.1.3 7.5.3.5 7.3.5 15.9c0 2.7.7 5.3 2.1 7.7L.4 31.7l8.3-2.2c2.3 1.3 4.9 2 7.5 2h.1c8.6 0 15.6-7 15.6-15.6 0-4.2-1.6-8.2-4.5-11.1zM16.2 28.8h-.1c-2.3 0-4.6-.6-6.6-1.8l-.47-.28-4.9 1.3 1.3-4.8-.31-.49c-1.3-2.1-2-4.5-2-7 0-7.3 6-13.3 13.3-13.3 3.6 0 6.9 1.4 9.5 3.9 2.5 2.5 3.9 5.9 3.9 9.5 0 7.3-6 13.3-13.2 13.3z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Smooth scroll (sin librerías)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (!id || id === '#') return;
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</body>
+</html>
