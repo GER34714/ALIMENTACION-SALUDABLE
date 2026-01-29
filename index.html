@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +9,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Alimentación Saludables | Comer rico, saludable y sin complicaciones" />
-  <meta property="og:description" content="Recetario digital con +70 recetas + 3 bonos GRATIS. Oferta de lanzamiento: $14 USD. Compra segura por Hotmart y entrega automática." />
+  <meta property="og:description" content="Recetario digital con +70 recetas + 3 bonos GRATIS. Oferta de lanzamiento: $14 USD." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://iili.io/fsF3j9a.md.png" />
   <meta property="og:url" content="https://tusitio.com/" />
@@ -16,7 +17,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Alimentación Saludables | Recetario + Bonos" />
-  <meta name="twitter:description" content="Comer sano no tiene que ser aburrido. +70 recetas + 3 bonos GRATIS. $14 USD por lanzamiento." />
+  <meta name="twitter:description" content="Comer sano no tiene que ser aburrido. +70 recetas + 3 bonos GRATIS. $14 USD." />
   <meta name="twitter:image" content="https://iili.io/fsF3j9a.md.png" />
 
   <style>
@@ -146,9 +147,7 @@
     }
     .nav .actions{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
 
-    .hero{
-      padding: 46px 0 24px;
-    }
+    .hero{ padding: 46px 0 24px; }
     .hero-card{
       border-radius: calc(var(--radius) + 8px);
       border: 1px solid rgba(20,32,26,.10);
@@ -223,7 +222,6 @@
       object-fit: cover;
       display:block;
     }
-
     .mock .badges{
       display:flex;
       gap:10px;
@@ -268,9 +266,7 @@
     }
     .pad{ padding: 18px; }
 
-    .who{
-      grid-template-columns: repeat(2, minmax(0,1fr));
-    }
+    .who{ grid-template-columns: repeat(2, minmax(0,1fr)); }
     .q{
       display:flex;
       gap:12px;
@@ -294,9 +290,7 @@
     }
     .q p{ margin:0; color: rgba(20,32,26,.82); line-height:1.45; }
 
-    .features{
-      grid-template-columns: repeat(2, minmax(0,1fr));
-    }
+    .features{ grid-template-columns: repeat(2, minmax(0,1fr)); }
     .feat{
       display:flex; gap:12px; align-items:flex-start;
       padding:14px;
@@ -319,13 +313,9 @@
     .feat b{ display:block; margin:0 0 4px; }
     .feat span{ color: rgba(20,32,26,.72); line-height:1.45; }
 
-    .benefits{
-      grid-template-columns: repeat(2, minmax(0,1fr));
-    }
+    .benefits{ grid-template-columns: repeat(2, minmax(0,1fr)); }
 
-    .testimonials{
-      grid-template-columns: repeat(3, minmax(0,1fr));
-    }
+    .testimonials{ grid-template-columns: repeat(3, minmax(0,1fr)); }
     .t{
       padding:16px;
       border-radius: 18px;
@@ -361,9 +351,7 @@
     .who2 b{ font-size: 13px; }
     .who2 span{ font-size: 12px; color: var(--muted); display:block; margin-top:2px; }
 
-    .bonuses{
-      grid-template-columns: repeat(3, minmax(0,1fr));
-    }
+    .bonuses{ grid-template-columns: repeat(3, minmax(0,1fr)); }
     .bonus{
       padding:16px;
       border-radius: 18px;
@@ -438,63 +426,6 @@
       gap: 18px;
       align-items:stretch;
     }
-    .price-card{
-      border-radius: calc(var(--radius) + 6px);
-      border: 1px solid rgba(20,32,26,.10);
-      background:
-        radial-gradient(700px 260px at 20% 10%, rgba(107,211,178,.28), transparent 55%),
-        radial-gradient(680px 250px at 90% 0%, rgba(255,143,184,.22), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,.80), rgba(255,255,255,.62));
-      box-shadow: var(--shadow);
-      padding: 20px;
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
-      backdrop-filter: blur(10px);
-    }
-    .price-card .row{
-      display:flex;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-    .strike{ color: rgba(20,32,26,.55); text-decoration: line-through; font-weight:800; }
-    .big{
-      font-size: clamp(34px, 4vw, 52px);
-      font-weight: 950;
-      letter-spacing: -1px;
-      color: #14201a;
-    }
-    .off{
-      font-weight: 950;
-      color: #14201a;
-      background: rgba(107,211,178,.26);
-      border: 1px solid rgba(107,211,178,.36);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      letter-spacing:.25px;
-    }
-    .mini{
-      font-size: 12px;
-      color: var(--muted);
-      line-height:1.5;
-    }
-    .alert{
-      margin-top: 12px;
-      background: rgba(255,224,138,.35);
-      border: 1px solid rgba(255,224,138,.55);
-      color: rgba(20,32,26,.88);
-      padding: 12px 14px;
-      border-radius: 16px;
-      font-size: 13px;
-      line-height: 1.5;
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-    }
-    .alert b{ color:#14201a; }
 
     details{
       border-radius: 16px;
@@ -603,6 +534,25 @@
       .mock .img{ height: 240px; }
       .bonus-img{ height: 180px; }
     }
+
+    /* ===== Shopify Buy Button: que no rompa el diseño ===== */
+    #shopify-buy-wrap{
+      border-radius: calc(var(--radius) + 6px);
+      border: 1px solid rgba(20,32,26,.10);
+      background:
+        radial-gradient(700px 260px at 20% 10%, rgba(107,211,178,.28), transparent 55%),
+        radial-gradient(680px 250px at 90% 0%, rgba(255,143,184,.22), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.80), rgba(255,255,255,.62));
+      box-shadow: var(--shadow);
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      overflow:hidden;
+    }
+    /* Ajustes típicos de iframes/botones que inyecta Shopify */
+    .shopify-buy__btn{
+      border-radius:999px !important;
+      font-weight:900 !important;
+    }
   </style>
 </head>
 
@@ -637,13 +587,10 @@
               <h2>No tenés que <span class="accent">pasar hambre</span> para comer sano.</h2>
               <p class="lead">Solo necesitás saber cómo. Empezá a comer <b>rico</b>, <b>saludable</b> y <b>sin complicaciones</b>, aunque tengas poco tiempo o no te guste complicarte en la cocina.</p>
 
-              <div class="cta-row">
-                <a class="btn" href="#comprar" id="btnHero">QUIERO EMPEZAR A COMER SALUDABLE</a>
-                <a class="btn secondary" href="#incluye">¿Qué incluye?</a>
-              </div>
+              <div class="hero .cta-row"></div>
 
               <div class="micro">
-                ✅ Compra 100% segura por <b>Hotmart</b> · 📩 Entrega automática por correo · 🕒 Recetas listas en <b>10–20 min</b>
+                ✅ Compra segura · 📩 Entrega automática · 🕒 Recetas listas en <b>10–20 min</b>
               </div>
             </div>
 
@@ -796,7 +743,7 @@
         <div class="cta-row" style="margin-top:16px;">
           <a class="btn" href="#comprar">QUIERO EMPEZAR A COMER SALUDABLE</a>
         </div>
-        <div class="mini">Por $14 USD · Compra 100% segura · Entrega automática en tu correo</div>
+        <div class="mini">Compra segura · Entrega automática</div>
       </div>
     </section>
 
@@ -929,60 +876,103 @@
             <p>Tenés 7 días para probar el recetario. Si no es lo que esperabas, podés pedir la devolución total del dinero sin explicaciones.</p>
           </div>
           <div class="box">
-            <h4>🔒 Pago 100% seguro (Hotmart)</h4>
-            <p>Tu pago se procesa mediante Hotmart. Recibís el acceso automáticamente en tu correo para descargar en PDF.</p>
+            <h4>🔒 Pago 100% seguro</h4>
+            <p>Tu pago se procesa de forma segura. Recibís el acceso automáticamente en tu correo para descargar en PDF.</p>
           </div>
           <div class="box">
             <h4>📩 Acceso inmediato</h4>
-            <p>Solo necesitás hacer clic, pagar y en minutos tendrás acceso desde tu dispositivo. También queda disponible en tu cuenta de Hotmart.</p>
+            <p>Solo necesitás hacer clic, pagar y en minutos tendrás acceso desde tu dispositivo.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PRECIO / CTA -->
+    <!-- COMPRA (SHOPIFY) -->
     <section id="comprar">
       <div class="wrap">
         <div class="section-title">
           <div>
-            <h3>Resumen de lo que obtenés hoy</h3>
-            <p>Recetario + bonos + acceso inmediato. Todo listo para empezar hoy mismo.</p>
+            <h3>Comprar ahora</h3>
+            <p>Pago seguro con Shopify · Podés ver el precio en tu moneda local.</p>
           </div>
         </div>
 
         <div class="pricing">
-          <div class="price-card" aria-label="Precio y compra">
-            <div class="row">
-              <div class="pill">✅ +70 preparaciones · ✅ Acceso inmediato y de por vida</div>
-              <div class="off">85% OFF</div>
-            </div>
-
-            <div class="row" style="margin-top:6px;">
-              <div>
-                <div class="strike">Valor total: $45 USD</div>
-                <div class="big">AHORA SOLO $14 USD</div>
-              </div>
-            </div>
-
-            <div class="mini">🎁 Incluye BONUS 1 (Bebidas saludables), BONUS 2 (Salsas caseras), BONUS 3 (Infaltables del mercado)</div>
-
-            <div class="cta-row" style="margin-top:12px;">
-              <!-- Reemplazá el href con tu checkout real (Hotmart / link de compra) -->
-              <a class="btn" id="buyBtn" href="https://hotmart.com/" target="_blank" rel="noopener">COMPRAR AHORA</a>
-              <a class="btn secondary" href="#faq">Tengo dudas</a>
-            </div>
-
-            <div class="alert">
-              <div aria-hidden="true">⚠️</div>
-              <div>
-                <b>Oferta especial de lanzamiento</b><br/>
-                Este precio es temporal y puede subir en cualquier momento. ¡No lo dejes pasar! Hoy podés empezar a transformar tu alimentación sin complicarte.
-              </div>
-            </div>
-
-            <div class="mini" style="margin-top:6px;">
-              *Haz clic en el botón para ver el precio en tu moneda local (según plataforma).
-            </div>
+          <div id="shopify-buy-wrap" aria-label="Checkout Shopify">
+            <!-- Shopify Buy Button -->
+            <div id="product-component-1769650766261"></div>
+            <script type="text/javascript">
+            /*<![CDATA[*/
+            (function () {
+              var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+              if (window.ShopifyBuy) {
+                if (window.ShopifyBuy.UI) {
+                  ShopifyBuyInit();
+                } else {
+                  loadScript();
+                }
+              } else {
+                loadScript();
+              }
+              function loadScript() {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = scriptURL;
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                script.onload = ShopifyBuyInit;
+              }
+              function ShopifyBuyInit() {
+                var client = ShopifyBuy.buildClient({
+                  domain: '0g7hkf-u7.myshopify.com',
+                  storefrontAccessToken: '280718940be3d7eb9db595066b6116d0',
+                });
+                ShopifyBuy.UI.onReady(client).then(function (ui) {
+                  ui.createComponent('product', {
+                    id: '9276623454466',
+                    node: document.getElementById('product-component-1769650766261'),
+                    moneyFormat: '%24%7B%7Bamount_with_comma_separator%7D%7D',
+                    options: {
+                      "product": {
+                        "styles": {
+                          "product": {
+                            "@media (min-width: 601px)": {
+                              "max-width": "100%",
+                              "margin-left": "0px",
+                              "margin-bottom": "0px"
+                            }
+                          }
+                        },
+                        "text": { "button": "Comprar" }
+                      },
+                      "modalProduct": {
+                        "contents": {
+                          "img": false,
+                          "imgWithCarousel": true,
+                          "button": false,
+                          "buttonWithQuantity": true
+                        },
+                        "styles": {
+                          "product": {
+                            "@media (min-width: 601px)": {
+                              "max-width": "100%",
+                              "margin-left": "0px",
+                              "margin-bottom": "0px"
+                            }
+                          }
+                        },
+                        "text": { "button": "Comprar" }
+                      },
+                      "cart": {
+                        "text": { "total": "Subtotal", "button": "Finalizar compra" }
+                      },
+                      "toggle": {}
+                    },
+                  });
+                });
+              }
+            })();
+            /*]]>*/
+            </script>
           </div>
 
           <div class="card pad" aria-label="Qué recibís">
@@ -1058,20 +1048,14 @@
           <details>
             <summary><span>¿Cómo accedo al producto?</span><span class="chev">⌄</span></summary>
             <div class="content">
-              Una vez completes el pago, recibirás todo por correo electrónico en formato PDF para descargarlo, imprimirlo y usarlo de inmediato.<br/><br/>
-              También podés acceder desde Hotmart:
-              <ul>
-                <li>Entrá a Hotmart y hacé clic en “Entrar”.</li>
-                <li>Ve al menú lateral y seleccioná “Mi cuenta”.</li>
-                <li>Hacé clic en “Mis compras” y ahí estará el ebook listo para vos.</li>
-              </ul>
+              Una vez completes el pago, recibirás todo por correo electrónico en formato PDF para descargarlo, imprimirlo y usarlo de inmediato.
             </div>
           </details>
 
           <details>
             <summary><span>¿Cómo hago para comprar?</span><span class="chev">⌄</span></summary>
             <div class="content">
-              Hacé clic en el botón <b>“Comprar ahora”</b>, completá el formulario de pago seguro y en minutos tendrás acceso al recurso completo directamente en tu correo.
+              Deslizá hasta la sección <b>“Comprar ahora”</b>, elegí la cantidad y finalizá la compra de forma segura.
             </div>
           </details>
         </div>
@@ -1104,10 +1088,8 @@
     </div>
   </footer>
 
-  <!-- WhatsApp flotante (opcional)
-       Reemplazá el número si corresponde, o borrá todo este bloque si no aplica. -->
+  <!-- WhatsApp flotante (opcional) -->
   <a class="wa-float" href="https://wa.me/5491164499481" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
-    <!-- SVG WhatsApp (estilo oficial simple) -->
     <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
       <path fill="#25D366" d="M19.11 17.33c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.31.2-.57.07-.26-.13-1.1-.41-2.1-1.31-.78-.69-1.31-1.54-1.46-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.17-.26.26-.43.09-.17.04-.33-.02-.46-.06-.13-.58-1.4-.79-1.92-.21-.51-.43-.44-.58-.45l-.5-.01c-.17 0-.46.06-.7.33-.24.26-.92.9-.92 2.19 0 1.29.94 2.54 1.07 2.72.13.17 1.85 2.82 4.49 3.95.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.53-.63 1.75-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.17-.5-.3z"/>
       <path fill="#25D366" d="M27.2 4.8C24.3 1.9 20.3.3 16.1.3 7.5.3.5 7.3.5 15.9c0 2.7.7 5.3 2.1 7.7L.4 31.7l8.3-2.2c2.3 1.3 4.9 2 7.5 2h.1c8.6 0 15.6-7 15.6-15.6 0-4.2-1.6-8.2-4.5-11.1zM16.2 28.8h-.1c-2.3 0-4.6-.6-6.6-1.8l-.47-.28-4.9 1.3 1.3-4.8-.31-.49c-1.3-2.1-2-4.5-2-7 0-7.3 6-13.3 13.3-13.3 3.6 0 6.9 1.4 9.5 3.9 2.5 2.5 3.9 5.9 3.9 9.5 0 7.3-6 13.3-13.2 13.3z"/>
