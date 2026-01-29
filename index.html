@@ -10,27 +10,33 @@
   <meta property="og:title" content="Alimentación Saludables | Comer rico, saludable y sin complicaciones" />
   <meta property="og:description" content="Recetario digital con +70 recetas + 3 bonos GRATIS. Oferta de lanzamiento: $14 USD. Compra segura por Hotmart y entrega automática." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Alimentaci%C3%B3n+Saludables" />
+  <meta property="og:image" content="https://iili.io/fsF3j9a.md.png" />
   <meta property="og:url" content="https://tusitio.com/" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Alimentación Saludables | Recetario + Bonos" />
   <meta name="twitter:description" content="Comer sano no tiene que ser aburrido. +70 recetas + 3 bonos GRATIS. $14 USD por lanzamiento." />
-  <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Alimentaci%C3%B3n+Saludables" />
+  <meta name="twitter:image" content="https://iili.io/fsF3j9a.md.png" />
 
   <style>
     :root{
-      --bg:#0b0f0d;
-      --bg2:#0f1512;
-      --card:#111a16;
-      --muted:#9fb0a6;
-      --text:#eaf3ee;
-      --line:rgba(255,255,255,.10);
-      --accent:#28b463; /* verde */
-      --accent2:#e74c3c; /* rojo CTA */
-      --accent3:#f1c40f; /* amarillo aviso */
-      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      /* Tema claro + degradés pastel */
+      --bg:#f7f7ff;
+      --bg2:#f6fffb;
+
+      --card: rgba(255,255,255,.72);
+      --card2: rgba(255,255,255,.88);
+
+      --text:#14201a;
+      --muted:#5c6e64;
+      --line: rgba(20,32,26,.12);
+
+      --accent:#6bd3b2;   /* menta pastel */
+      --accent2:#ff8fb8;  /* rosa pastel CTA */
+      --accent3:#ffe08a;  /* amarillo pastel aviso */
+
+      --shadow: 0 16px 45px rgba(20,32,26,.10);
       --radius: 18px;
       --max: 1100px;
     }
@@ -42,8 +48,9 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
       color:var(--text);
       background:
-        radial-gradient(1100px 600px at 15% -10%, rgba(40,180,99,.18), transparent 60%),
-        radial-gradient(1000px 540px at 90% 0%, rgba(231,76,60,.14), transparent 55%),
+        radial-gradient(1000px 600px at 12% -10%, rgba(107,211,178,.40), transparent 60%),
+        radial-gradient(900px 520px at 92% 0%, rgba(255,143,184,.35), transparent 55%),
+        radial-gradient(900px 520px at 60% 110%, rgba(173,186,255,.35), transparent 55%),
         linear-gradient(180deg, var(--bg), var(--bg2));
       overflow-x:hidden;
     }
@@ -51,41 +58,44 @@
     a{ color:inherit; text-decoration:none; }
     .wrap{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
     .grid{ display:grid; gap:18px; }
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       gap:10px;
       padding:14px 18px;
       border-radius: 999px;
-      border:1px solid transparent;
-      background: var(--accent2);
-      color:#fff;
-      font-weight:800;
+      border:1px solid rgba(20,32,26,.10);
+      background: linear-gradient(135deg, rgba(255,143,184,.95), rgba(173,186,255,.85));
+      color:#18231d;
+      font-weight:900;
       letter-spacing:.2px;
-      box-shadow: 0 14px 35px rgba(231,76,60,.26);
+      box-shadow: 0 14px 35px rgba(255,143,184,.20);
       cursor:pointer;
       transition: transform .15s ease, filter .15s ease;
       user-select:none;
     }
-    .btn:hover{ transform: translateY(-1px); filter: brightness(1.05); }
-    .btn:active{ transform: translateY(0px); filter: brightness(.98); }
+    .btn:hover{ transform: translateY(-1px); filter: brightness(1.02); }
+    .btn:active{ transform: translateY(0px); filter: brightness(.99); }
 
     .btn.secondary{
-      background: transparent;
-      border-color: rgba(255,255,255,.16);
+      background: rgba(255,255,255,.65);
+      border-color: rgba(20,32,26,.12);
       box-shadow:none;
       color: var(--text);
-      font-weight:700;
+      font-weight:800;
+      backdrop-filter: blur(8px);
     }
+
     .pill{
       display:inline-flex;
       align-items:center;
       gap:10px;
       padding:10px 14px;
       border-radius: 999px;
-      background: rgba(40,180,99,.10);
-      border: 1px solid rgba(40,180,99,.22);
-      color: #dff5e8;
-      font-weight:700;
+      background: rgba(107,211,178,.22);
+      border: 1px solid rgba(107,211,178,.35);
+      color: #0f2b20;
+      font-weight:900;
       font-size: 13px;
       letter-spacing:.15px;
     }
@@ -95,8 +105,8 @@
       top:0;
       z-index:40;
       backdrop-filter: blur(10px);
-      background: rgba(11,15,13,.55);
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.65);
+      border-bottom: 1px solid rgba(20,32,26,.10);
     }
     .nav{
       display:flex;
@@ -115,10 +125,10 @@
       width:42px; height:42px;
       border-radius: 14px;
       background:
-        radial-gradient(18px 18px at 30% 35%, rgba(255,255,255,.25), transparent 55%),
-        linear-gradient(135deg, rgba(40,180,99,.95), rgba(46,204,113,.65));
-      box-shadow: 0 10px 28px rgba(40,180,99,.18);
-      border: 1px solid rgba(255,255,255,.10);
+        radial-gradient(18px 18px at 30% 35%, rgba(255,255,255,.65), transparent 55%),
+        linear-gradient(135deg, rgba(107,211,178,.95), rgba(173,186,255,.85));
+      box-shadow: 0 10px 28px rgba(107,211,178,.18);
+      border: 1px solid rgba(20,32,26,.10);
     }
     .brand h1{
       font-size: 14px;
@@ -138,11 +148,11 @@
     }
     .hero-card{
       border-radius: calc(var(--radius) + 8px);
-      border: 1px solid rgba(255,255,255,.10);
+      border: 1px solid rgba(20,32,26,.10);
       background:
-        radial-gradient(900px 380px at 15% 25%, rgba(40,180,99,.16), transparent 55%),
-        radial-gradient(800px 320px at 88% 10%, rgba(231,76,60,.14), transparent 50%),
-        linear-gradient(180deg, rgba(17,26,22,.85), rgba(17,26,22,.58));
+        radial-gradient(900px 380px at 15% 25%, rgba(107,211,178,.30), transparent 55%),
+        radial-gradient(800px 320px at 88% 10%, rgba(255,143,184,.25), transparent 50%),
+        linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.58));
       box-shadow: var(--shadow);
       overflow:hidden;
     }
@@ -159,10 +169,10 @@
       line-height: 1.05;
       letter-spacing: -0.5px;
     }
-    .hero h2 .accent{ color: var(--accent); }
+    .hero h2 .accent{ color: #1b7f67; }
     .hero .lead{
       margin: 0 0 16px;
-      color: rgba(234,243,238,.85);
+      color: rgba(20,32,26,.78);
       font-size: 16px;
       line-height:1.55;
       max-width: 52ch;
@@ -183,27 +193,33 @@
 
     .mock{
       border-radius: calc(var(--radius) + 6px);
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.26);
+      border: 1px solid rgba(20,32,26,.10);
+      background: rgba(255,255,255,.55);
       padding: 18px;
       display:grid;
       gap:12px;
+      box-shadow: 0 10px 24px rgba(20,32,26,.08);
+      backdrop-filter: blur(10px);
     }
     .mock .img{
       border-radius: 16px;
       overflow:hidden;
-      border:1px solid rgba(255,255,255,.10);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      height: 220px;
+      border:1px solid rgba(20,32,26,.10);
+      background: rgba(255,255,255,.70);
+      height: 260px;
       display:flex;
       align-items:center;
       justify-content:center;
-      color: rgba(234,243,238,.80);
       text-align:center;
-      padding: 16px;
-      font-weight:800;
-      letter-spacing:.3px;
+      position: relative;
     }
+    .mock .img img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
     .mock .badges{
       display:flex;
       gap:10px;
@@ -213,10 +229,10 @@
       padding:8px 10px;
       border-radius: 999px;
       font-size: 12px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      color: rgba(234,243,238,.88);
-      font-weight:700;
+      border: 1px solid rgba(20,32,26,.12);
+      background: rgba(255,255,255,.72);
+      color: rgba(20,32,26,.80);
+      font-weight:900;
     }
 
     section{ padding: 22px 0; }
@@ -241,9 +257,10 @@
     }
     .card{
       border-radius: var(--radius);
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(17,26,22,.55);
-      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+      border:1px solid rgba(20,32,26,.10);
+      background: rgba(255,255,255,.70);
+      box-shadow: 0 12px 30px rgba(20,32,26,.08);
+      backdrop-filter: blur(10px);
     }
     .pad{ padding: 18px; }
 
@@ -256,20 +273,22 @@
       align-items:flex-start;
       padding: 14px;
       border-radius: 16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
+      border:1px solid rgba(20,32,26,.10);
+      background: rgba(255,255,255,.65);
+      box-shadow: 0 10px 24px rgba(20,32,26,.06);
+      backdrop-filter: blur(10px);
     }
     .q .icon{
       width:36px; height:36px;
       border-radius: 14px;
-      background: rgba(40,180,99,.13);
-      border: 1px solid rgba(40,180,99,.22);
+      background: rgba(107,211,178,.25);
+      border: 1px solid rgba(107,211,178,.35);
       display:flex; align-items:center; justify-content:center;
       font-weight:900;
-      color: #dff5e8;
+      color: #0f2b20;
       flex: 0 0 auto;
     }
-    .q p{ margin:0; color: rgba(234,243,238,.90); line-height:1.45; }
+    .q p{ margin:0; color: rgba(20,32,26,.82); line-height:1.45; }
 
     .features{
       grid-template-columns: repeat(2, minmax(0,1fr));
@@ -278,21 +297,23 @@
       display:flex; gap:12px; align-items:flex-start;
       padding:14px;
       border-radius: 16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.18);
+      border:1px solid rgba(20,32,26,.10);
+      background: rgba(255,255,255,.65);
+      box-shadow: 0 10px 24px rgba(20,32,26,.06);
+      backdrop-filter: blur(10px);
     }
     .feat .tick{
       width:22px; height:22px; border-radius:999px;
-      background: rgba(40,180,99,.18);
-      border:1px solid rgba(40,180,99,.28);
+      background: rgba(107,211,178,.28);
+      border:1px solid rgba(107,211,178,.38);
       display:flex; align-items:center; justify-content:center;
       font-weight:900;
-      color: #c9f6db;
+      color: #0f2b20;
       flex: 0 0 auto;
       margin-top: 2px;
     }
     .feat b{ display:block; margin:0 0 4px; }
-    .feat span{ color: rgba(234,243,238,.82); line-height:1.45; }
+    .feat span{ color: rgba(20,32,26,.72); line-height:1.45; }
 
     .benefits{
       grid-template-columns: repeat(2, minmax(0,1fr));
@@ -304,20 +325,22 @@
     .t{
       padding:16px;
       border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(20,32,26,.10);
+      background: rgba(255,255,255,.65);
+      box-shadow: 0 10px 24px rgba(20,32,26,.06);
+      backdrop-filter: blur(10px);
       min-height: 160px;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
       gap:12px;
     }
-    .t p{ margin:0; color: rgba(234,243,238,.88); line-height:1.5; }
+    .t p{ margin:0; color: rgba(20,32,26,.78); line-height:1.5; }
     .t .who2{ display:flex; align-items:center; gap:10px; }
     .avatar{
       width:34px; height:34px; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+      border: 1px solid rgba(20,32,26,.12);
+      background: linear-gradient(135deg, rgba(255,255,255,.90), rgba(255,255,255,.55));
     }
     .who2 b{ font-size: 13px; }
     .who2 span{ font-size: 12px; color: var(--muted); display:block; margin-top:2px; }
@@ -328,11 +351,14 @@
     .bonus{
       padding:16px;
       border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.18);
+      border: 1px solid rgba(20,32,26,.10);
+      background: rgba(255,255,255,.65);
+      box-shadow: 0 10px 24px rgba(20,32,26,.06);
+      backdrop-filter: blur(10px);
       display:flex;
       flex-direction:column;
       gap:10px;
+      overflow:hidden;
     }
     .bonus .top{
       display:flex;
@@ -342,16 +368,25 @@
     }
     .tag{
       font-size: 12px;
-      font-weight:900;
-      background: rgba(231,76,60,.14);
-      border:1px solid rgba(231,76,60,.25);
-      color: #ffd9d4;
+      font-weight:950;
+      background: rgba(255,143,184,.22);
+      border:1px solid rgba(255,143,184,.30);
+      color: #3a1021;
       padding: 6px 10px;
       border-radius: 999px;
       letter-spacing:.2px;
     }
+    .bonus-img{
+      width:100%;
+      height: 160px;
+      border-radius: 14px;
+      border: 1px solid rgba(20,32,26,.10);
+      object-fit: cover;
+      display:block;
+      background: rgba(255,255,255,.85);
+    }
     .bonus h4{ margin:6px 0 0; font-size: 16px; }
-    .bonus p{ margin:0; color: rgba(234,243,238,.85); line-height:1.5; }
+    .bonus p{ margin:0; color: rgba(20,32,26,.74); line-height:1.5; }
     .price-line{
       margin-top:auto;
       display:flex;
@@ -360,10 +395,10 @@
       gap:12px;
       font-size: 13px;
       color: var(--muted);
-      border-top: 1px solid rgba(255,255,255,.10);
+      border-top: 1px solid rgba(20,32,26,.10);
       padding-top: 10px;
     }
-    .price-line b{ color: #fff; }
+    .price-line b{ color: #17211b; }
 
     .trust{
       display:grid;
@@ -373,11 +408,13 @@
     .trust .box{
       padding: 16px;
       border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(20,32,26,.10);
+      background: rgba(255,255,255,.65);
+      box-shadow: 0 10px 24px rgba(20,32,26,.06);
+      backdrop-filter: blur(10px);
     }
     .trust .box h4{ margin: 0 0 6px; font-size: 14px; }
-    .trust .box p{ margin: 0; color: rgba(234,243,238,.82); line-height:1.5; font-size: 13px; }
+    .trust .box p{ margin: 0; color: rgba(20,32,26,.72); line-height:1.5; font-size: 13px; }
 
     .pricing{
       display:grid;
@@ -387,16 +424,17 @@
     }
     .price-card{
       border-radius: calc(var(--radius) + 6px);
-      border: 1px solid rgba(255,255,255,.10);
+      border: 1px solid rgba(20,32,26,.10);
       background:
-        radial-gradient(700px 260px at 20% 10%, rgba(40,180,99,.14), transparent 55%),
-        radial-gradient(680px 250px at 90% 0%, rgba(231,76,60,.12), transparent 55%),
-        linear-gradient(180deg, rgba(17,26,22,.85), rgba(17,26,22,.60));
+        radial-gradient(700px 260px at 20% 10%, rgba(107,211,178,.28), transparent 55%),
+        radial-gradient(680px 250px at 90% 0%, rgba(255,143,184,.22), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.80), rgba(255,255,255,.62));
       box-shadow: var(--shadow);
       padding: 20px;
       display:flex;
       flex-direction:column;
       gap: 10px;
+      backdrop-filter: blur(10px);
     }
     .price-card .row{
       display:flex;
@@ -405,18 +443,18 @@
       gap:10px;
       flex-wrap:wrap;
     }
-    .strike{ color: rgba(234,243,238,.55); text-decoration: line-through; font-weight:700; }
+    .strike{ color: rgba(20,32,26,.55); text-decoration: line-through; font-weight:800; }
     .big{
       font-size: clamp(34px, 4vw, 52px);
       font-weight: 950;
       letter-spacing: -1px;
-      color: #eafff2;
+      color: #14201a;
     }
     .off{
-      font-weight: 900;
-      color: #fff;
-      background: rgba(40,180,99,.16);
-      border: 1px solid rgba(40,180,99,.26);
+      font-weight: 950;
+      color: #14201a;
+      background: rgba(107,211,178,.26);
+      border: 1px solid rgba(107,211,178,.36);
       padding: 8px 12px;
       border-radius: 999px;
       font-size: 12px;
@@ -429,9 +467,9 @@
     }
     .alert{
       margin-top: 12px;
-      background: rgba(241,196,15,.14);
-      border: 1px solid rgba(241,196,15,.22);
-      color: rgba(255,246,205,.95);
+      background: rgba(255,224,138,.35);
+      border: 1px solid rgba(255,224,138,.55);
+      color: rgba(20,32,26,.88);
       padding: 12px 14px;
       border-radius: 16px;
       font-size: 13px;
@@ -440,19 +478,21 @@
       gap:10px;
       align-items:flex-start;
     }
-    .alert b{ color:#fff; }
+    .alert b{ color:#14201a; }
 
     details{
       border-radius: 16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
+      border:1px solid rgba(20,32,26,.10);
+      background: rgba(255,255,255,.65);
+      box-shadow: 0 10px 24px rgba(20,32,26,.06);
+      backdrop-filter: blur(10px);
       overflow:hidden;
     }
     details + details{ margin-top: 10px; }
     summary{
       cursor:pointer;
       padding: 14px 14px;
-      font-weight: 850;
+      font-weight: 900;
       list-style:none;
       display:flex;
       align-items:center;
@@ -460,21 +500,21 @@
       gap:10px;
     }
     summary::-webkit-details-marker{ display:none; }
-    summary span{ color: rgba(234,243,238,.92); }
+    summary span{ color: rgba(20,32,26,.92); }
     summary .chev{
       width: 28px; height: 28px;
       border-radius: 12px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.18);
+      border:1px solid rgba(20,32,26,.12);
+      background: rgba(255,255,255,.65);
       display:flex; align-items:center; justify-content:center;
       font-weight: 950;
-      color: rgba(234,243,238,.85);
+      color: rgba(20,32,26,.75);
       flex: 0 0 auto;
     }
     details[open] summary .chev{ transform: rotate(180deg); }
     details .content{
       padding: 0 14px 14px;
-      color: rgba(234,243,238,.82);
+      color: rgba(20,32,26,.76);
       line-height: 1.6;
       font-size: 14px;
     }
@@ -483,21 +523,23 @@
       text-align:center;
       padding: 18px;
       border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(20,32,26,.10);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 10px 24px rgba(20,32,26,.06);
+      backdrop-filter: blur(10px);
     }
     .closing p{
       margin:0;
-      color: rgba(234,243,238,.86);
+      color: rgba(20,32,26,.78);
       line-height:1.7;
       font-size: 14px;
     }
-    .closing b{ color: #fff; }
+    .closing b{ color: #14201a; }
 
     footer{
       padding: 26px 0 40px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      color: rgba(234,243,238,.65);
+      border-top: 1px solid rgba(20,32,26,.10);
+      color: rgba(20,32,26,.62);
       font-size: 12px;
       text-align:center;
     }
@@ -511,16 +553,16 @@
       width: 56px;
       height: 56px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.30);
+      border: 1px solid rgba(20,32,26,.14);
+      background: rgba(255,255,255,.70);
       backdrop-filter: blur(10px);
       display:flex;
       align-items:center;
       justify-content:center;
-      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      box-shadow: 0 18px 40px rgba(20,32,26,.16);
       transition: transform .15s ease, filter .15s ease;
     }
-    .wa-float:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+    .wa-float:hover{ transform: translateY(-1px); filter: brightness(1.02); }
     .wa-icon{
       width: 30px;
       height: 30px;
@@ -537,6 +579,8 @@
       .who, .features, .benefits{ grid-template-columns: 1fr; }
       .nav{ gap:10px; }
       .brand{ min-width: auto; }
+      .mock .img{ height: 240px; }
+      .bonus-img{ height: 180px; }
     }
   </style>
 </head>
@@ -584,10 +628,7 @@
 
             <div class="mock" aria-label="Vista previa del producto">
               <div class="img">
-                <div>
-                  <div style="font-size:14px; opacity:.95;">Mockup del ebook + bonos</div>
-                  <div style="margin-top:10px; font-size:12px; opacity:.75;">Reemplazar por imagen real del producto</div>
-                </div>
+                <img src="https://iili.io/fsF3j9a.md.png" alt="Vista previa del recetario Alimentación Saludables" />
               </div>
               <div class="badges">
                 <div class="badge">+70 recetas</div>
@@ -803,8 +844,9 @@
           <div class="bonus">
             <div class="top">
               <div class="tag">🎁 BONO 1</div>
-              <div style="font-size:12px;color:var(--muted);">HOY GRATIS</div>
+              <div style="font-size:12px;color:var(--muted);font-weight:900;">HOY GRATIS</div>
             </div>
+            <img class="bonus-img" src="https://iili.io/fsfO9kv.png" alt="Bebidas saludables" />
             <h4>Bebidas saludables</h4>
             <p>Limpia tu cuerpo de forma natural, mejora tu digestión y activa tu metabolismo con recetas fáciles, sabrosas y refrescantes.</p>
             <div class="price-line">
@@ -816,8 +858,9 @@
           <div class="bonus">
             <div class="top">
               <div class="tag">🎁 BONO 2</div>
-              <div style="font-size:12px;color:var(--muted);">HOY GRATIS</div>
+              <div style="font-size:12px;color:var(--muted);font-weight:900;">HOY GRATIS</div>
             </div>
+            <img class="bonus-img" src="https://iili.io/fsf8MHg.md.jpg" alt="Salsas caseras en minutos" />
             <h4>Salsas caseras en minutos</h4>
             <p>Convertí cualquier plato básico en una experiencia gourmet. Incluye salsas para ensaladas, pastas, carnes y dips… ¡sin conservantes ni excesos!</p>
             <div class="price-line">
@@ -829,8 +872,9 @@
           <div class="bonus">
             <div class="top">
               <div class="tag">🎁 BONO 3</div>
-              <div style="font-size:12px;color:var(--muted);">HOY GRATIS</div>
+              <div style="font-size:12px;color:var(--muted);font-weight:900;">HOY GRATIS</div>
             </div>
+            <img class="bonus-img" src="https://iili.io/fsfQXMg.md.jpg" alt="Infaltables del mercado" />
             <h4>Infaltables del mercado</h4>
             <p>Organizá tus compras sin estrés, elegí mejor tus ingredientes y evitá ultraprocesados. Incluye lista editable para adaptarla a gustos y presupuesto.</p>
             <div class="price-line">
