@@ -22,7 +22,6 @@
 
   <style>
     :root{
-      /* Tema claro + degradés pastel (sin franjas sólidas) */
       --bg:#f7f8ff;
       --bg2:#f6fffb;
 
@@ -34,9 +33,9 @@
 
       --line: rgba(21,34,27,.12);
 
-      --accent:#65d3b4;   /* menta pastel */
-      --accent2:#ff8fb8;  /* rosa pastel CTA */
-      --accent3:#ffe08a;  /* amarillo pastel aviso */
+      --accent:#65d3b4;
+      --accent2:#ff8fb8;
+      --accent3:#ffe08a;
 
       --shadow: 0 18px 55px rgba(21,34,27,.10);
       --radius: 18px;
@@ -50,7 +49,6 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
       color:var(--text);
 
-      /* Background con imagen + overlays pastel (sin franjas sólidas) */
       background:
         radial-gradient(1100px 720px at 12% -10%, rgba(101,211,180,.55), transparent 62%),
         radial-gradient(980px 640px at 95% 0%, rgba(255,143,184,.50), transparent 60%),
@@ -82,11 +80,12 @@
       letter-spacing:.2px;
       box-shadow: 0 14px 35px rgba(255,143,184,.22);
       cursor:pointer;
-      transition: transform .15s ease, filter .15s ease;
+      transition: transform .15s ease, filter .15s ease, opacity .15s ease;
       user-select:none;
     }
     .btn:hover{ transform: translateY(-1px); filter: brightness(1.02); }
     .btn:active{ transform: translateY(0px); filter: brightness(.99); }
+    .btn[disabled]{ opacity:.6; cursor:not-allowed; transform:none; }
 
     .btn.secondary{
       background: rgba(255,255,255,.70);
@@ -133,7 +132,6 @@
       min-width: 220px;
     }
 
-    /* LOGO header: calza JUSTO */
     .logo{
       width:42px; height:42px;
       border-radius: 14px;
@@ -230,7 +228,6 @@
       backdrop-filter: blur(10px);
     }
 
-    /* ✅ HERO IMG SIN RECUADRO (sin borde, sin fondo, sin caja) */
     .mock .img{
       border-radius: 0;
       overflow: visible;
@@ -522,7 +519,6 @@
     }
     .alert b{ color:#0f241b; }
 
-    /* Order bump (real) */
     .bump{
       margin-top: 10px;
       border-radius: 18px;
@@ -559,7 +555,6 @@
       line-height: 1.5;
     }
 
-    /* ✅ Imagen del bump */
     .bump-img{
       width:100%;
       height:auto;
@@ -570,7 +565,45 @@
       margin-top: 10px;
     }
 
-    /* Link de mail con estilo (interactivo) */
+    .bump-check{
+      margin-top: 12px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(21,34,27,.10);
+      background: rgba(255,255,255,.68);
+      box-shadow: 0 10px 24px rgba(21,34,27,.06);
+      backdrop-filter: blur(10px);
+    }
+    .bump-check input{
+      width:18px; height:18px; margin-top:2px;
+      accent-color: #65d3b4;
+      cursor:pointer;
+    }
+    .bump-check label{
+      cursor:pointer;
+      display:block;
+      line-height:1.45;
+      color: rgba(21,34,27,.85);
+      font-weight: 800;
+    }
+    .bump-check small{
+      display:block;
+      margin-top:4px;
+      color: rgba(21,34,27,.70);
+      font-weight: 650;
+      font-size: 12px;
+    }
+
+    .bump-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 12px;
+    }
+
     .mail-link{
       font-weight: 950;
       text-decoration: underline;
@@ -646,46 +679,25 @@
       text-underline-offset: 3px;
     }
 
-    /* Shopify Buy Button - integrado al recuadro */
-    .shopify-embed{
-      width:100%;
-      overflow:hidden;
-      border-radius: 16px;
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(21,34,27,.12);
+      box-shadow: 0 18px 55px rgba(21,34,27,.18);
+      padding: 12px 14px;
+      border-radius: 14px;
+      max-width: min(520px, calc(100% - 30px));
+      z-index: 9999;
+      display:none;
+      backdrop-filter: blur(10px);
+      color: rgba(21,34,27,.85);
+      font-weight: 800;
+      line-height: 1.45;
     }
-    .shopify-embed iframe{
-      width:100% !important;
-      max-width:100% !important;
-      border:0 !important;
-      border-radius: 16px !important;
-      background: transparent !important;
-    }
-    .shopify-embed .shopify-buy__layout-vertical,
-    .shopify-embed .shopify-buy__product,
-    .shopify-embed .shopify-buy__product__variant-selectors,
-    .shopify-embed .shopify-buy__product__title,
-    .shopify-embed .shopify-buy__product__price,
-    .shopify-embed .shopify-buy__quantity-container,
-    .shopify-embed .shopify-buy__btn-wrapper{
-      background: transparent !important;
-      box-shadow: none !important;
-      border: 0 !important;
-      margin: 0 !important;
-    }
-    .shopify-embed .shopify-buy__btn{
-      width: 100% !important;
-      border-radius: 999px !important;
-      border: 1px solid rgba(21,34,27,.12) !important;
-      padding: 14px 18px !important;
-      font-weight: 900 !important;
-      letter-spacing: .2px !important;
-      background: linear-gradient(135deg, rgba(255,143,184,.95), rgba(173,186,255,.86)) !important;
-      color: #18231d !important;
-      box-shadow: 0 14px 35px rgba(255,143,184,.22) !important;
-    }
-    .shopify-embed .shopify-buy__btn:hover{ filter: brightness(1.02) !important; }
-    .shopify-embed *{ max-width: 100% !important; }
 
-    /* Responsive */
     @media (max-width: 980px){
       .hero-inner{ grid-template-columns: 1fr; }
       .pricing{ grid-template-columns: 1fr; }
@@ -1064,14 +1076,7 @@
 
             <div class="mini">🎁 Incluye BONUS 1, BONUS 2 y BONUS 3 (sin costo adicional)</div>
 
-            <div class="cta-row" style="margin-top:12px; width:100%;">
-              <div class="shopify-embed" style="width:100%;">
-                <div id="product-component-1769817907483"></div>
-              </div>
-              <a class="btn secondary" href="#faq">Tengo dudas</a>
-            </div>
-
-            <!-- ✅ Order bump REAL (mismo carrito / mismo checkout) + IMAGEN -->
+            <!-- ✅ Order bump REAL (mismo checkout) + BOTÓN VISIBLE -->
             <div class="bump" aria-label="Order bump">
               <div class="top">
                 <div class="title">✨ Oferta opcional (Order Bump): “Bebidas &amp; Smoothies Saludables Anti-Inflamatorios”</div>
@@ -1081,21 +1086,34 @@
               <img class="bump-img" src="https://iili.io/fQybyQ4.png" alt="Order bump - Bebidas & Smoothies" />
 
               <div class="desc">
-                Ideal para sumar un extra práctico y complementar el recetario principal.
-                <div style="margin-top:10px;">
-                  <div id="bump-component-10573929939254"></div>
-                </div>
-                <div class="mini" style="margin-top:10px;">
-                  Se suma al mismo carrito y lo pagás todo junto en el checkout.
+                Sumalo si querés complementar el recetario con bebidas y smoothies antiinflamatorios.
+              </div>
+
+              <div class="bump-check">
+                <input type="checkbox" id="addBump" />
+                <div>
+                  <label for="addBump">Sí, quiero sumar el extra por $11.900,00</label>
+                  <small>Se paga TODO JUNTO en el mismo checkout (no se separa).</small>
                 </div>
               </div>
+
+              <div class="bump-actions">
+                <button class="btn secondary" id="btnBumpToggle" type="button">Agregar / Quitar extra</button>
+                <button class="btn" id="btnCheckout2" type="button">Comprar TODO junto</button>
+              </div>
+            </div>
+
+            <!-- ✅ BOTÓN PRINCIPAL (no se puede “no ver”) -->
+            <div class="cta-row" style="margin-top:12px; width:100%;">
+              <button class="btn" id="btnCheckout" type="button">Comprar ahora</button>
+              <a class="btn secondary" href="#faq">Tengo dudas</a>
             </div>
 
             <div class="alert">
               <div aria-hidden="true">⚠️</div>
               <div>
                 <b>Oferta especial de lanzamiento</b><br/>
-                Este precio es temporal y puede subir en cualquier momento. ¡No lo dejes pasar! Hoy podés empezar a transformar tu alimentación sin complicarte.
+                Este precio es temporal y puede subir en cualquier momento. ¡No lo dejes pasar!
               </div>
             </div>
 
@@ -1103,141 +1121,7 @@
               📧 Contacto: <a class="mail-link" href="mailto:inspira.creativa.digital@gmail.com">inspira.creativa.digital@gmail.com</a>
             </div>
 
-            <!-- Shopify Buy Button (datos reales) -->
-            <script type="text/javascript">
-            /*<![CDATA[*/
-            (function () {
-              var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-              if (window.ShopifyBuy) {
-                if (window.ShopifyBuy.UI) {
-                  ShopifyBuyInit();
-                } else {
-                  loadScript();
-                }
-              } else {
-                loadScript();
-              }
-
-              function loadScript() {
-                var script = document.createElement('script');
-                script.async = true;
-                script.src = scriptURL;
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-                script.onload = ShopifyBuyInit;
-              }
-
-              function ShopifyBuyInit() {
-                var client = ShopifyBuy.buildClient({
-                  domain: '0rci2k-j1.myshopify.com',
-                  storefrontAccessToken: '50bf8708d940a7fbb161d69597202448',
-                });
-
-                ShopifyBuy.UI.onReady(client).then(function (ui) {
-                  // ✅ Producto principal (como ya lo tenías)
-                  ui.createComponent('product', {
-                    id: '10458990870838',
-                    node: document.getElementById('product-component-1769817907483'),
-                    moneyFormat: '%24%7B%7Bamount_with_comma_separator%7D%7D',
-                    options: {
-                      "product": {
-                        "styles": {
-                          "product": {
-                            "@media (min-width: 601px)": {
-                              "max-width": "100%",
-                              "margin-left": "0px",
-                              "margin-bottom": "0px"
-                            }
-                          }
-                        },
-                        "text": { "button": "Comprar ahora" }
-                      },
-                      "productSet": {
-                        "styles": {
-                          "products": {
-                            "@media (min-width: 601px)": { "margin-left": "0px" }
-                          }
-                        }
-                      },
-                      "modalProduct": {
-                        "contents": {
-                          "img": false,
-                          "imgWithCarousel": true,
-                          "button": false,
-                          "buttonWithQuantity": true
-                        },
-                        "styles": {
-                          "product": {
-                            "@media (min-width: 601px)": {
-                              "max-width": "100%",
-                              "margin-left": "0px",
-                              "margin-bottom": "0px"
-                            }
-                          }
-                        },
-                        "text": { "button": "Comprar ahora" }
-                      },
-                      "option": {},
-                      "cart": {
-                        "text": {
-                          "total": "Subtotal",
-                          "button": "Finalizar compra"
-                        }
-                      },
-                      "toggle": {}
-                    },
-                  });
-
-                  // ✅ Order bump como Buy Button REAL (MISMO carrito / MISMO checkout)
-                  // ID del producto bump: 10573929939254
-                  ui.createComponent('product', {
-                    id: '10573929939254',
-                    node: document.getElementById('bump-component-10573929939254'),
-                    moneyFormat: '%24%7B%7Bamount_with_comma_separator%7D%7D',
-                    options: {
-                      "product": {
-                        "contents": {
-                          "img": false,
-                          "title": false,
-                          "price": false,
-                          "description": false,
-                          "options": false,
-                          "quantity": false
-                        },
-                        "text": {
-                          "button": "Sumar este extra ($11.900)"
-                        },
-                        "styles": {
-                          "button": {
-                            "width": "100%",
-                            "border-radius": "999px",
-                            "padding": "14px 18px",
-                            "font-weight": "900",
-                            "letter-spacing": ".2px",
-                            "border": "1px solid rgba(21,34,27,.14)",
-                            "background": "rgba(255,255,255,.70)",
-                            "color": "#15221b",
-                            "box-shadow": "none"
-                          },
-                          "product": {
-                            "max-width": "100%",
-                            "margin": "0"
-                          }
-                        }
-                      },
-                      "cart": {
-                        "text": {
-                          "total": "Subtotal",
-                          "button": "Finalizar compra"
-                        }
-                      },
-                      "toggle": {}
-                    }
-                  });
-                });
-              }
-            })();
-            /*]]>*/
-            </script>
+            <div class="mini" id="shopifyStatus" style="margin-top:10px; display:none;"></div>
           </div>
 
           <div class="card pad" aria-label="Qué recibís">
@@ -1336,7 +1220,7 @@
       </div>
     </section>
 
-    <!-- CIERRE EMOCIONAL -->
+    <!-- CIERRE -->
     <section>
       <div class="wrap">
         <div class="closing">
@@ -1359,6 +1243,8 @@
     </div>
   </footer>
 
+  <div class="toast" id="toast"></div>
+
   <script>
     // Smooth scroll (sin librerías)
     document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -1371,6 +1257,179 @@
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+
+    // =========================
+    // ✅ CHECKOUT ÚNICO (todo junto)
+    // =========================
+    const SHOP_DOMAIN = "0rci2k-j1.myshopify.com";
+    const STOREFRONT_TOKEN = "50bf8708d940a7fbb161d69597202448";
+
+    // IDs de producto (los tuyos)
+    const MAIN_PRODUCT_ID_NUM = "10458990870838";
+    const BUMP_PRODUCT_ID_NUM = "10573929939254";
+
+    const MAIN_GID = `gid://shopify/Product/${MAIN_PRODUCT_ID_NUM}`;
+    const BUMP_GID = `gid://shopify/Product/${BUMP_PRODUCT_ID_NUM}`;
+
+    const apiVersions = ["2025-01", "2024-10", "2024-07", "2024-04"];
+
+    const btnCheckout = document.getElementById("btnCheckout");
+    const btnCheckout2 = document.getElementById("btnCheckout2");
+    const btnBumpToggle = document.getElementById("btnBumpToggle");
+    const addBump = document.getElementById("addBump");
+    const toast = document.getElementById("toast");
+    const statusEl = document.getElementById("shopifyStatus");
+
+    let mainVariantGid = null;
+    let bumpVariantGid = null;
+    let apiBase = null;
+
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.style.display = "block";
+      clearTimeout(showToast._t);
+      showToast._t = setTimeout(() => toast.style.display = "none", 3600);
+    }
+
+    function setStatus(msg){
+      statusEl.style.display = "block";
+      statusEl.textContent = msg;
+    }
+
+    async function graphqlFetch(version, query, variables){
+      const url = `https://${SHOP_DOMAIN}/api/${version}/graphql.json`;
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Shopify-Storefront-Access-Token": STOREFRONT_TOKEN
+        },
+        body: JSON.stringify({ query, variables })
+      });
+      const data = await res.json();
+      return { ok: res.ok, data };
+    }
+
+    async function pickWorkingApi(){
+      const pingQuery = `query { shop { name } }`;
+      for (const v of apiVersions){
+        try{
+          const r = await graphqlFetch(v, pingQuery, {});
+          if (r.ok && r.data && !r.data.errors){
+            apiBase = v;
+            return v;
+          }
+        }catch(e){}
+      }
+      return null;
+    }
+
+    async function getFirstVariant(productGid){
+      const q = `
+        query($id: ID!) {
+          product(id: $id) {
+            title
+            variants(first: 1) {
+              edges { node { id availableForSale } }
+            }
+          }
+        }
+      `;
+      const r = await graphqlFetch(apiBase, q, { id: productGid });
+      if (r.data?.errors) throw new Error(r.data.errors[0]?.message || "Error GraphQL");
+      const node = r.data?.data?.product?.variants?.edges?.[0]?.node;
+      if (!node?.id) throw new Error("No se encontró la variante del producto.");
+      return node.id;
+    }
+
+    async function checkoutCreate(lineItems){
+      const m = `
+        mutation($lineItems: [CheckoutLineItemInput!]!) {
+          checkoutCreate(input: { lineItems: $lineItems }) {
+            checkout { webUrl }
+            userErrors { field message }
+          }
+        }
+      `;
+      const r = await graphqlFetch(apiBase, m, { lineItems });
+      if (r.data?.errors) throw new Error(r.data.errors[0]?.message || "Error GraphQL");
+      const errs = r.data?.data?.checkoutCreate?.userErrors || [];
+      if (errs.length) throw new Error(errs.map(e => e.message).join(" · "));
+      const webUrl = r.data?.data?.checkoutCreate?.checkout?.webUrl;
+      if (!webUrl) throw new Error("No se pudo generar el checkout.");
+      return webUrl;
+    }
+
+    async function initShopify(){
+      btnCheckout.disabled = true;
+      btnCheckout2.disabled = true;
+      btnCheckout.textContent = "Cargando checkout…";
+      btnCheckout2.textContent = "Cargando…";
+      setStatus("Conectando con Shopify…");
+
+      const working = await pickWorkingApi();
+      if (!working){
+        setStatus("No se pudo conectar con Shopify Storefront API.");
+        showToast("Error: no se pudo conectar con Shopify.");
+        btnCheckout.disabled = false;
+        btnCheckout2.disabled = false;
+        btnCheckout.textContent = "Comprar ahora";
+        btnCheckout2.textContent = "Comprar TODO junto";
+        return;
+      }
+
+      try{
+        mainVariantGid = await getFirstVariant(MAIN_GID);
+        bumpVariantGid = await getFirstVariant(BUMP_GID);
+        setStatus("Listo ✅ Botones de compra activos.");
+      }catch(e){
+        setStatus("Error cargando productos desde Shopify.");
+        showToast(e.message || "Error cargando productos.");
+      }
+
+      btnCheckout.disabled = false;
+      btnCheckout2.disabled = false;
+      btnCheckout.textContent = "Comprar ahora";
+      btnCheckout2.textContent = "Comprar TODO junto";
+    }
+
+    async function goCheckout(){
+      if (!mainVariantGid){
+        showToast("Todavía no está listo el checkout. Reintentá en 2 segundos.");
+        return;
+      }
+
+      btnCheckout.disabled = true;
+      btnCheckout2.disabled = true;
+      btnCheckout.textContent = "Abriendo checkout…";
+      btnCheckout2.textContent = "Abriendo…";
+      showToast("Generando checkout…");
+
+      try{
+        const items = [{ variantId: mainVariantGid, quantity: 1 }];
+        if (addBump.checked && bumpVariantGid){
+          items.push({ variantId: bumpVariantGid, quantity: 1 });
+        }
+        const url = await checkoutCreate(items);
+        window.location.href = url; // ✅ pago todo junto
+      }catch(e){
+        showToast(e.message || "Error creando el checkout.");
+        btnCheckout.disabled = false;
+        btnCheckout2.disabled = false;
+        btnCheckout.textContent = "Comprar ahora";
+        btnCheckout2.textContent = "Comprar TODO junto";
+      }
+    }
+
+    btnCheckout.addEventListener("click", goCheckout);
+    btnCheckout2.addEventListener("click", goCheckout);
+
+    btnBumpToggle.addEventListener("click", () => {
+      addBump.checked = !addBump.checked;
+      showToast(addBump.checked ? "Extra agregado ✅ (se paga junto)" : "Extra quitado ❎");
+    });
+
+    initShopify();
   </script>
 </body>
 </html>
