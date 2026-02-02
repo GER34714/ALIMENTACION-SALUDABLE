@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -558,6 +559,17 @@
       line-height: 1.5;
     }
 
+    /* ✅ Imagen del bump */
+    .bump-img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius: 14px;
+      border: 1px solid rgba(21,34,27,.12);
+      background: rgba(255,255,255,.85);
+      margin-top: 10px;
+    }
+
     /* Link de mail con estilo (interactivo) */
     .mail-link{
       font-weight: 950;
@@ -1059,12 +1071,15 @@
               <a class="btn secondary" href="#faq">Tengo dudas</a>
             </div>
 
-            <!-- ✅ Order bump REAL (mismo carrito / mismo checkout) -->
+            <!-- ✅ Order bump REAL (mismo carrito / mismo checkout) + IMAGEN -->
             <div class="bump" aria-label="Order bump">
               <div class="top">
-                <div class="title">✨ Oferta opcional (Order Bump): “Bebidas & Smoothies Saludables Anti-Inflamatorios”</div>
+                <div class="title">✨ Oferta opcional (Order Bump): “Bebidas &amp; Smoothies Saludables Anti-Inflamatorios”</div>
                 <div class="price">$11.900,00</div>
               </div>
+
+              <img class="bump-img" src="https://iili.io/fQybyQ4.png" alt="Order bump - Bebidas & Smoothies" />
+
               <div class="desc">
                 Ideal para sumar un extra práctico y complementar el recetario principal.
                 <div style="margin-top:10px;">
@@ -1173,7 +1188,7 @@
                   });
 
                   // ✅ Order bump como Buy Button REAL (MISMO carrito / MISMO checkout)
-                  // ID del producto bump: 10573929939254 (el que me pasaste en el .js)
+                  // ID del producto bump: 10573929939254
                   ui.createComponent('product', {
                     id: '10573929939254',
                     node: document.getElementById('bump-component-10573929939254'),
@@ -1359,3 +1374,4 @@
   </script>
 </body>
 </html>
+```
